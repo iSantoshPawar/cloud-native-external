@@ -20,6 +20,7 @@ input[type=text], select, textarea {
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
+  font-weight: 500;
 }
 input[type=submit] {
   background-color: #8983e4;
@@ -52,17 +53,27 @@ input[type=submit]:hover {
   width: 15%;
   margin-top: 6px;
 }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  --bs-gutter-x: 0rem;
+}
   </style>
 </head>
 <body>
-  <div class="container" style="background-color: aliceblue;">
-      <h1>Welcome to Five Star application</h1>
-      <h3>This is Cool team </h3>
-
+  <div class="container" style="background-color: beige;">
+      <h2>Welcome to Five Star application</h2>
+      <h4>This is Cool team </h4>
+</div>
+<div class="container" style="background-color: rgb(186, 214, 240);">
     {{{body}}}
 </div>
-<div class="container" style="background-color: beige;">
-  <h2>Add an event</h2>
+<div class="container" style="background-color: aliceblue;">
+  <h4>Add an event</h4>
     <form action="/event" method="post">
         <div class="row">
         <div class="col-25">
